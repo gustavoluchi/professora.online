@@ -1,0 +1,39 @@
+body  {
+    display: grid;
+    gap: 1em;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+}
+div#primeiraFaixa {
+    width: auto;
+    height: 500px;
+    background-image: url('https://static.wixstatic.com/media/fadfca_27c5c2b80e6243b8b9d34e5bc4049302~mv2.jpg/v1/fill/w_1011,h_1000,al_t,q_85/fadfca_27c5c2b80e6243b8b9d34e5bc4049302~mv2.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.faixa {
+
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+a {
+    padding: 4px 4px 4px 4px;
+    background-color: rgb(46, 95, 110);
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+a:hover {
+    background-color: rgb(61, 120, 138);
+}
