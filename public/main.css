@@ -1,0 +1,284 @@
+
+body  {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100%;
+    margin: 0;
+    font-family: 'roboto', Tahoma, Geneva, Verdana, sans-serif;
+    background-position: center;
+    text-align: center;
+    color: #4E6C7F;
+    font-size: 18px;
+
+}
+h1 { 
+    font-size: 3rem;
+    margin-block-end: 0.3em; }
+h2 { 
+    margin-block-start: 0.2em; }
+
+
+header {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#primeiraFaixa {
+    display: grid;
+    height: auto;
+    min-height: 700px;
+    width: auto;
+    background-image: url('https://static.wixstatic.com/media/fadfca_27c5c2b80e6243b8b9d34e5bc4049302~mv2.jpg/v1/fill/w_1261,h_995,al_t,q_85,usm_0.66_1.00_0.01/fadfca_27c5c2b80e6243b8b9d34e5bc4049302~mv2.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+#primeiro-texto {
+    box-sizing: border-box;
+    width: 68%;
+    float: left;
+    text-align: left;
+    margin-left: 8%;
+} 
+#primeiro-texto p { max-width: 670px; }
+#primeiro-texto div { 
+    text-align: center;
+    max-width: 400px; 
+}
+
+#apresentacao {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F5F0ED;
+}
+
+#selfie {
+    flex: 1 1 150px;
+    margin: 20px;
+}
+#selfie img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  #texto-apresentacao {
+    flex: 1 1 150px;
+    margin: 20px;
+    margin-right: 10vw;
+    text-align: left;
+    max-width: 550px;
+}
+
+.botao {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #4E6C7F;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.botao:hover {
+    background-color: rgb(30, 65, 87);
+}
+
+#vai-aprender {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 5% 5%;
+} #vai-aprender strong { font-size: 5rem;}
+#vc {padding-top: 5vh;}
+.card {
+    /*
+ flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] 
+      If we don't want the items to stretch:
+
+    margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    background: aliceblue;
+    display: flex;
+    transition: 1s;
+    */
+    min-height: 220px;
+    min-width: 220px;
+}
+
+/*#card1::after { content: "1";}
+#card1:hover::after { content: "Compreender os conceitos processuais e as mudanças do Novo CPC";}
+#card2::after { content: "2";}
+#card2:hover::after { 
+    content: "Elaborar petições e recursos com confiança";
+    font-size: 2rem;
+}
+#card3:hover::after { content: "Dominar as técnicas processuais para a tutela dos direitos";}*/
+
+
+.box1, .box2{
+    min-width: 200px;
+    min-height: 200px;
+    text-align:center;
+    transition:0.5s;
+    align-self: center;
+    font-size: 3rem;
+    color: #DBB7A4;
+}
+.box2 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    color:#344855;
+}
+.box-wrap:hover .box2{
+    opacity:1;
+}
+.box-wrap:hover .box1{
+    opacity:0;
+}
+.box-wrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: center;
+}
+
+.visual {
+    height: 100px;
+    width: 100%;
+    background: wheat;
+    margin: 0.5rem 0;
+  }
+  
+  .cardw {
+    flex: 1 1 200px;
+    margin: 5px;
+    background: lightpink;
+    padding: 1rem;
+    text-align: center;
+  }
+
+.ao-redor {
+    --gutter: 2.5rem;
+    background: var(--gradient-blue);
+    text-align: center;
+    grid-gap: var(--gutter);
+    padding: var(--gutter);
+    display: grid;
+    margin: 2rem 0;
+    pointer-events: none;
+  }
+  
+  .ao-redor > * {
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    padding: 2rem 1rem;
+    pointer-events: auto;
+    transition: 300ms opacity, 300ms transform;
+  }
+  
+  .ao-redor:hover > *:hover,
+  .ao-redor:focus-within > *:focus {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+.ao-redor:hover > *:not(:hover) {
+    opacity: 0.4;
+}
+
+
+  @media (min-width: 40em) {
+    .ao-redor {        
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .ao-redor > * {
+      padding: 4rem 1rem;
+    }
+  }
+  
+  .wrap-collabsible {
+    margin-bottom: 1.2rem 0;
+  }
+  
+  input[type='checkbox'] {
+    display: none;
+  }
+  
+  .lbl-toggle {
+    display: block;
+  
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  
+    padding: 1rem;
+  
+    color: #A77B0E;
+    background: #FAE042;
+  
+    cursor: pointer;
+  
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+  }
+  
+  .lbl-toggle:hover {
+    color: #7C5A0B;
+  }
+  
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+  
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+  
+    transition: transform .2s ease-out;
+  }
+  
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+  
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+  }
+  
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .collapsible-content .content-inner {
+    background: rgba(250, 224, 66, .2);
+    border-bottom: 1px solid rgba(250, 224, 66, .45);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+  }
